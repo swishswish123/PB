@@ -1,2 +1,6 @@
-export const imgPath = (filename) =>
-  `${import.meta.env.BASE_URL}images/${filename}`;
+// src/utils/imagePath.js
+export const imgPath = (file) => {
+  // remove leading slashes if any, then prepend base
+  const cleanFile = file.replace(/^\/+/, "");
+  return `${import.meta.env.BASE_URL}images/${cleanFile}`;
+};
