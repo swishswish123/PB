@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import { imgPath } from "../utils/imagePath";
 
 
 export default function ExperienceCard({ exp }) {
   return (
     <div className="experience-card">
-      <img src={exp.image} alt={exp.company} />
+      <img src={imgPath(exp.image)} alt={exp.company} />
 
       <div className="experience-content">
         <Link to={`/work-experience/${exp.id}`} className="project-card">

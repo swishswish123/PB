@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { projects } from '../data/projects'
+import { imgPath } from "../utils/imagePath";
 
 export default function ProjectDetail() {
 const { id } = useParams()
@@ -10,7 +11,7 @@ if (!project) return <p>Project not found</p>
 return (
 <section className="project-detail">
 <h1>{project.title}</h1>
-<img src={project.image} />
+<img src={imgPath(project.image)} />
 <p>{project.description}</p>
 </section>
 )
